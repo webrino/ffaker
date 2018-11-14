@@ -54,5 +54,27 @@ module FFaker
     def time_zone
       'Asia/Kolkata'
     end
+
+    def street_suffix
+      fetch_sample(STREET_SUFFIX)
+    end
+
+    def street_name
+      case rand(0..2)
+      when 0 then "#{NameIN.last_name} #{street_suffix}"
+      when 1 then "#{NameIN.first_name} #{street_suffix}"
+      when 2 then "#{NameIN.first_name} #{NameIN.last_name} #{street_suffix}"
+      end
+    end
+
+    def neighborhood
+      fetch_sample(NEIGHBORHOOD)
+    end
+
+    def street_address(include_secondary = [true, false].sample)
+      str = "#{building_number} #{street_name}"
+      str << " #{neighborhood}" if include_secondary
+      str
+    end
   end
 end
