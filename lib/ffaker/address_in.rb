@@ -55,6 +55,38 @@ module FFaker
       'Asia/Kolkata'
     end
 
+    def state_for(city)
+      case city
+      when 'Mumbai' then 'Maharashtra'
+      when 'Delhi' then 'Delhi'
+      when 'Bangalore' then 'Karnataka'
+      when 'Mysore' then 'Karnataka'
+      when 'Mangalore' then 'Karnataka'
+      when 'Hyderabad' then 'Telangana'
+      when 'Ahmedabad' then 'Gujarat'
+      when 'Chennai' then 'Tamil Nadu'
+      when 'Kolkata' then 'West Bengal'
+      when 'Surat' then 'Gujarat'
+      when 'Pune' then 'Maharashtra'
+      when 'Jaipur' then 'Rajasthan'
+      when 'Lucknow' then 'Uttar Pradesh'
+      when 'Kanpur' then 'Uttar Pradesh'
+      when 'Nagpur' then 'Maharashtra'
+      when 'Visakhapatnam' then 'Andhra Pradesh'
+      when 'Indore' then 'Madhya Pradesh'
+      when 'Thane' then 'Maharashtra'
+      when 'Bhopal' then 'Madhya Pradesh'
+      when 'Patna' then 'Bihar'
+      when 'Vadodara' then 'Gujarat'
+      when 'Ghaziabad' then 'Uttar Pradesh'
+      when 'Ludhiana' then 'Punjab'
+      when 'Coimbatore' then 'Tamil Nadu'
+      when 'Agra' then 'Uttar Pradesh'
+      when 'Madurai' then 'Tamil Nadu'
+      else 'N/A'
+      end
+    end
+
     def street_suffix
       fetch_sample(STREET_SUFFIX)
     end
