@@ -19,6 +19,10 @@ module FFaker
       fetch_sample(CITY)
     end
 
+    def city_in
+      fetch_sample(CITY)
+    end
+
     def state
       fetch_sample(STATE)
     end
@@ -92,10 +96,11 @@ module FFaker
     end
 
     def street_name
-      case rand(0..2)
+      case rand(0..3)
       when 0 then "#{NameIN.last_name} #{street_suffix}"
       when 1 then "#{NameIN.first_name} #{street_suffix}"
       when 2 then "#{NameIN.first_name} #{NameIN.last_name} #{street_suffix}"
+      when 3 then "#{neighborhood}-#{neighborhood} #{street_suffix}"
       end
     end
 
