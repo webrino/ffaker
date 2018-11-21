@@ -62,6 +62,7 @@ module FFaker
     def state_for(city)
       case city
       when 'Mumbai' then 'Maharashtra'
+      when 'New Delhi' then 'Delhi'
       when 'Delhi' then 'Delhi'
       when 'Bangalore' then 'Karnataka'
       when 'Mysore' then 'Karnataka'
