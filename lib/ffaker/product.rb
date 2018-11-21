@@ -45,5 +45,9 @@ module FFaker
       when 1 then "#{letters(1..rand(1..2))}-#{rand(9900)}" # N-9400
       end
     end
+
+    def category
+      "#{fetch_sample(ADJ)} #{fetch_sample(NOUN)}s"
+    end
   end
 end
